@@ -1,0 +1,752 @@
+what is java programming?
+Syntax of Java?
+what are the features of java?
+how to installation eclipse IDE?
+
+public:is an access specifier that declared the main method()as unprotected this is similar to c++ public modifier
+
+void :does not return any value
+static:does not changes
+
+java control statements/control flow in java?
+the stmts in the code are excecuted accroding to the order in which they appear.however,java provides stmts that can be used to control the flow of java code.such statements are called control flow statements.
+
+
+three statements?
+1)Decision making statements
+2)loop statements
+3)jump statements
+
+
+1)Decision making statements
+  a)if statements:four types if-statements
+
+  if(4>2){
+    sysout("true");
+  }
+  1)simple if statements
+  2)if-else statements 
+  3)if else-if ladder
+  4) Nested statment
+  b)switch statements
+  *cases cannot be duplicate
+  *default stmt is excecuted when any of the case does'nt match the value of expression
+
+  syntax:
+  swicth(expression){
+    case value1:
+    statments 1;
+    break;
+    .
+    .
+    .
+
+    case value N;
+    statment n;
+    break;
+    default:
+    default statment;
+  }
+
+2)loop statements
+a)do while loop
+b)while loop
+c)for loop
+d)for-each loop 
+
+for loop:
+syntax:
+for(initialization;condition;increament/decreament){
+    //block of statements;
+}
+
+EX:
+public class Calculation {
+
+	public static void main(String[] args) {
+int sum=0;
+for(int i=1;i<=3;i++) {
+	sum=sum+i;
+}
+System.out.println("the sum of first 3 natural number is "+sum);
+	}
+
+}
+
+
+FOR EACH:
+SYNTAX:
+for(data_type var:array_name/collection_name){
+    //statements
+}
+ex:
+syout("for each loop")
+
+while condition:
+while condition is checked at the start of the loop.if the condition is true,then the loop body will be excecuted;otherwise the statements after the loop will be excecuted:
+
+syntax:
+while(condition){
+  //stmts
+}
+
+
+jump statements
+break and continue;
+
+
+break statements
+ex:
+public class BreakExampl1 {
+
+	public static void main(String[] args) {
+		for(int i=0;i<=10;i++) {
+			System.out.println(i);
+			if(i==8) {
+				break;
+			}
+		}
+	}
+
+}
+continue;
+public class Continue {
+
+	public static void main(String[] args) {
+		for(int i=0;i<=2;i++) {
+			for(int j=i;j<=5;j++) {
+				if(j==4) {
+					continue;
+				}
+				System.out.println(j);
+			}
+		
+			
+		}
+	}
+
+}
+
+Arrays variables
+variable is a name of memory location.
+there are three types variables in java
+1)local
+2)instance
+3)static
+
+local:a variable declared inside the body of the method is called local variable.
+
+you can use this variable only within that method and other methods in the class
+local variable cannot be defined with the "static" keyword
+
+
+
+instance:
+a variable declared inside the class but outside the body of the method,is called an instance variable it is not declared as static
+
+static:
+a variable is declared as static  is called a static variable.it cannot be local
+
+ex:
+public class A {
+
+	static int m=100;//static variable
+	
+	void method() {
+		int n=90;//local variable
+	}
+	public static void main(String[] args) {
+		int data=50;//instance variable
+	}
+}
+
+typecasting
+public class Main {
+  public static void main(String[] args) {
+    int myInt = 9;
+    double myDouble = myInt; // Automatic casting: int to double
+
+    System.out.println(myInt);      // Outputs 9
+    System.out.println(myDouble);   // Outputs 9.0
+  }
+}
+
+
+public class Main {
+  public static void main(String[] args) {
+    double myDouble = 9.78d;
+    int myInt = (int) myDouble; // Manual casting: double to int
+
+    System.out.println(myDouble);   // Outputs 9.78
+    System.out.println(myInt);      // Outputs 9
+  }
+}
+
+
+methods in java?
+a method is a block of code or collection of statements or a set of code grouped together to perform a certain task or operation
+
+advantages:
+reusablity of code.
+we write a method once and use it many times.
+
+
+what is the constructor?
+constructor is a special type of member function/method which is used to initialize the object.
+constructor is a block of codes similar to the method.
+
+it is called when an instance of the class is created.
+
+there are two types of constructor?
+1)Default constructor(no-arguments)
+2)parameterized constructor
+
+Rules:
+1)constructor name must be the same as its class name
+2)a constructor must have no explict retur type
+3)java constructor cannot be abstract ,static ,final and synchorized
+
+
+java oops concepts
+oop:object oriented programming language
+
+
+its faster and cheaper develpoment and maintance
+
+1)abstraction
+2)inheritance
+3)polymorphism
+4)encapsulation
+
+
+every object is a instance of class
+
+abstraction:its show essential feature without including background details or explanation
+
+It is used for hiding the data and giving the relevent data
+
+outer layer used in terms of design
+
+Hidding the internal implmentations details and highlight the set of service what are offering is called abstraction.
+
+ex:bank atm machine
+
+Advatages:
+without affecting outside the person.we can achieve internal implementaions
+
+
+4)encapsulation
+
+pin number
+5000( set data)
+withdraw (Get data)
+
+wrapping up of data and function into single unit is called encapsulation
+if any java class follows data hiding and abstraction such type of class is called encapsulation
+
+encapsulation=data hidding +abstaraction
+
+data hidding?
+hidding of the data outside person can't access our data directly
+
+by using private modifier we can implement data hidding
+
+ex:
+class Account{
+  private double balance=10000;
+  //setter and getter method
+}
+
+advantages:
+we can achieve security
+
+
+3)polymorphism
+
+same name with different form is the concept of polymorphism
+
+2 types:
+1)compile/static/early binding/overloading
+2)Runtime/dynamic /late binding /overriding
+
+overloading:if more than one method same name with same identity but with different signature(arguments)is called method overloading
+
+overriding :if two methods have same name with same argument.this is called as method overriding 
+
+
+overriding it is possible to use with inheritance.
+
+overriding method is called Runtime polymorphism
+
+4)inheritance
+
+Relationship between more than two class.
+
+
+
+Exception:
+    Exception is an event that distrupts the normal flow of the program.It is an Object which is thrown at runtime.
+
+    Exception handling
+    Exception handling is a mechanism to handle runtime errors such as classNotFoundException,IO Exception,SQL Exception,
+    Remote Exception.
+
+    Advantages of Exception handling
+    This is to maintain the normal flow of the appilication
+
+    Ex:
+    If you have 10 statements in java program and an exception occurs at statement 8 the rest of the code will not be excecuted.
+    therfore statements 9 to 10 will not be excecuted.
+    However,When we perform exception handling .the rest of the statements will be  excecuted.That is why we use exception handling in java.
+
+    Type of exception
+    1)checked Exception
+    2)UnChecked Exception
+    3)errors
+
+    1)checked Exception
+    The Exception which are checked by compiler for smoth exception of pragram at runtime. it is called checked Exception
+
+    If your method through checked Exception then it should  handle Exception using try catch block or throws keyword .otherwise program will give compilation errors
+
+    EX:
+
+    SQL Exception
+    IO Exception
+    classNotFoundException
+
+
+    2)UnChecked Exception:
+    Exception which are not checked by the compiler are called unchecked Exception
+
+    ex:
+    NullPointerException
+    ArrayIndexOutBoundException
+    IllegalArgumentException
+    IllegalStateException
+
+
+    3)errors
+    Error is recoverable.
+    ex:
+    outofMemoryError,VirtualMachineError,AssertionError etc;
+
+    UserDefinedException
+    1)All Exception must be child of throwable
+    2)throw keyword always returns inside the method
+
+how many types of you can create string object?
+String literal
+By new keyword
+
+String s="welcome";
+
+
+String s1="Welcome";
+String s2="Welcome"
+
+jvm checks the "string constant pool" first.
+if the string already exists in the pool, a reference to the pooled instance is returned.
+
+If the string does not exist int the pool,a new String instance is created and placed in the pool.
+
+2)new keyword
+jvm will create a new String object in the normal(non-pool)heap memory,and the literal "welcome" will be placed in the string constant pool.
+The variable name will be refer to the object in a heap(non-pool)
+
+
+String method
+char charAt(int index);
+int length();
+string concat(String str)
+String toLowerCase();
+String toUpperCase();
+String trim();
+
+
+ex:char[] ch={'j','a','v','a'}
+String s=new String(ch);
+
+output:java
+
+
+Lifecycle of thread?
+New:In this state,Thread class object is created using a new operator,but thread is not a live.thread does not start until we call 
+the start() method.
+
+Runnable():thread is ready to run after calling start()method.
+thread is not yet selected by the thread shedular
+
+Running:Thread shedular picks the thread from the ready state, & method ,Thread is running
+
+wait():
+a thread is not running but still alive or its waiting for other thread to finish.
+
+Multithreading
+Multithreading is a process of excecuting multiple threads simultaneously,Multithreading is used to obtain the multasking.it consumes
+less memory and gives the fast and effient performance.
+
+
+Advantages of multithreading
+
+Thread is lightweight
+threads share the same address space
+the cost of communication between the process is low.
+
+
+
+collections:
+    why we need to go for collections
+    what is collection framework
+    Collection Hierachy
+    List interface & implementations
+    Set interface & implementations
+    Queue interface &implementations
+    Map interface & implementations
+
+    if you want to store 100 value like 23,24,1,2....n values 
+    you want 100 variable
+
+     variables:to store the data
+     datatype-
+     1)primitive datatypes
+     byte short int long float double char boolean
+
+     2)referenced data types(Arrays,string ,class etc);
+
+     disadvantages are;
+     Not recommended to overcome this problem Arrays concept came
+
+
+     Array:
+     we can store group of values in single variable;
+
+     int[] a=new int[5];
+     arr[0]=100;
+     arr[1]=200;
+     arr[2]=300;
+     arr[3]=400;
+     arr[4]=500;
+
+
+     Limitations of Arrays.
+    1) Array size is fixed
+     can't increase size
+     can't decrease size
+    2)We can store only homogenious values (same type of values)
+    homogenious means :int a[]=new int[5];
+                        a[0]=10;
+                        a[1]="Renuka"
+                        a[2]=10.00;
+
+
+
+                        100 student objects in a one variable
+
+                        Ex:
+                        package collections;
+
+                        public class Student1 {
+                            private String name;
+
+                            public Student1(String name) {
+                                this.name=name;
+                            }
+
+                            public static void main(String[] args) {
+                                Student1 s[]=new Student1[5];
+                                s[0]=new Student1("ravi");
+                                s[1]=new Student1("raju");
+                                
+                            s[2]=new Student1("rani");
+                            s[3]=new Employee(101,"Ramesh");
+                            
+                            }
+
+                        }
+object array :object is default class object in java
+java.lang.package
+1) Array size is fixed
+     can't increase size
+     can't decrease size
+2)We can store  homogenious  and hetrogenious values (diffent type of values)
+
+
+Limitations of object
+fixed size
+every requirement program should write logically
+
+Collections :
+To overcome Arrays concept problem so collection came
+
+collection are used to group of objects/values
+collections are growable in nature
+dynamically size can be increased and decreased based on data
+
+we can store any type of data in collection
+
+customized
+(homegenious and hetrogenious)
+
+collections providing predefined methods to insert,update,delete,retrieve,sort .
+
+Collection is an entity/container which is use to store group of object
+
+Collections is framework
+Framework means ready made software 
+collectons is called as framework bcz its providing predefined interfaces,class and method to perform on data.
+
+set
+
+ex:
+package collections;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrayListEx1 {
+
+	public static void main(String[] args) {
+		
+		List l=new ArrayList();
+		l.add(100);//index of 0
+		l.add(100);//index of 1
+		l.add(200);//index of 2
+		l.add(300);//index of 3
+		l.add("raju");//index of 4
+		l.add("rani");//index of 5
+		l.add(100.60);//index of 6
+		l.set(1, 23);
+//		l.add(1, 23);
+		System.out.println(l);
+
+	}
+
+}
+
+output:[100, 23, 200, 300, raju, rani, 100.6]
+
+1)Insertion order will allows
+2)duplicate values also allows
+add:
+Ex:
+package collections;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrayListEx1 {
+
+	public static void main(String[] args) {
+		
+		List l=new ArrayList();
+		l.add(100);//index of 0
+		l.add(1111111);//index of 1
+		l.add(200);//index of 2
+		l.add(300);//index of 3
+		l.add("raju");//index of 4
+		l.add("rani");//index of 5
+		l.add(100.60);//index of 6
+//		l.set(1, 23);
+		l.add(1, 23);
+		System.out.println(l);
+
+	}
+
+}
+output:
+[100, 23, 1111111, 200, 300, raju, rani, 100.6]
+
+
+1.List
+This category is used to store group of individual elements where the elements can be duplicated
+List is an interface whose object can not be created directly.
+To work with this category we have to use following implementaions class of list interface
+
+Ex:ArrayList,LinkedList,Vector,Stack
+
+2.set
+This category is used to store group of individual elements but they can'not be duplicated
+Set is an interface whose object can not be created directly.
+To work with this category we have to use following implementaions class of Set interface
+
+Ex:HashSet,LinkedList and TreeSet
+
+3.Queue
+This category is used to hold the elements about to be processed in FIFO(First in First Out) order
+It is an ordered list of objects with its use limited to inserting elements at the end of the list
+and deleting elements from the start of the lsit.It follows the FIFO.
+
+Ex:PriorityQueue,BlockingQueue
+
+
+4.Map
+This category is used to store the element in form key value pairs where the key can't be duplicated ,value can be duplicated
+Map is an interface whose object can not be created directly.
+To work with this category,we have to use following implementation classes of Map interface
+
+Ex:HashMap,LinkedHashMap,TreeMap,HashTable
+
+
+List interface defines the following specific method
+1)Boolean add(int index,Collection c);
+2)Object get(int index);
+3)Object remove(int index);
+4)Object Set(int index,Object o);//to replace
+5)int index(Object o);//Returns index of first occurance of o
+6)int lastIndexOf(Object o);
+7)ListIterator listiterator();
+
+
+ArrayList
+ArrayList is an implementation class of collection interface.
+The underlying data structure is resizable
+Insertion order is preserved
+Hetrogeneous Objectos are allowed
+Null insertion is possible.
+it allows duplicate values
+
+LinkedList:
+ArrayList is an implementation class of collection interface.
+The underlying data structure is double LinkedList.
+it allows duplicate values
+Insertion order is preserved
+Hetrogeneous Objectos are allowed
+Null insertion is possible.
+
+
+What is the difference between ArrayList and LinkedList
+
+Vector
+vector is the implementation class of list interface which is also used to store group of individual objects where duplicate values are allowed
+
+vector is also called legacy class bcz it is available  from java 1.0 version
+
+vector is exactly similar to ArrayList but ArrrayList is not a synchronized class  where vector is a synchronized class
+
+vector class constructors
+1)Vector<E> v=new Vector<E>();
+2)Vector <E>v =new Vector <E>(int capacity);
+3)Vector<E>v=new Vector<E>(Collection obj);
+
+
+Stack :
+Stack  is a child class of vector and implements List interface
+Stack stores a group of objects using a mechanism called LIFO 
+LIFO MEANS last inserted element deleted first.
+
+example of LIFO is bangles
+
+methods
+we can use all collection methods
+we can also use legacy methods of vector class like addElement(),removeElement(),setElementAt() etc. 
+
+if you want to follow LIFO ,WE SHOLUD USE STACK METHODS LIKE 
+1)E PUSH(E Obj)
+2)E POP()
+3)E PEEK():THIS METHOD JUST RETURN THE TOP ELEMENT AVAILABLE ON STACK
+
+cursors of collection framework 
+cursors are mainly used to access the elements of any collection.
+we have following 3 types of cursors in collection framework
+1.Iterator;
+2.ListIterator
+3.Enumeration
+
+
+1.Iterator:
+this cursor is used to access the elements in forward direction only
+this cursor can be applied any collection(list,set)
+while accessing the methods we can also delete the elements
+Iterator is interface and we cannot create an object directly
+if we want to create an object for iterator,we have to use iterator()method
+
+
+creation of iterator:
+Iterator it=c.iterator();
+
+methods:
+1.boolean hasNext()
+2.Oject next();
+3.void remove()
+
+
+2.ListIterator
+this cursor is used to access the elements in both backward direction and forward direction only
+this cursor can be applied for only list category collection
+while accessing the methods we can also add,set delete the elements
+ListIterator is interface and we cannot create an object directly
+if we want to create an object for ListIterator,we have to use ListIterator()method
+
+creation of ListIterator:
+ListIterator it=c.listiterator();
+
+methods:
+1.boolean hasNext()
+2.Object next();
+3.Object previous()
+4.boolean hasPrevious()
+5.int nextIndex();
+6.int previousIndex();
+7.void remove();
+8.void set(Object obj);
+9.void add(Object obj)
+
+3.Enumeration
+this cursor is used to access the elements of collections only in forward direction
+this legacy cursor can be applied for only legacy classes like vector ,stack,hashtable
+Enumeration is interface and we cannot create an object directly
+if we want to create an object for Enumeration,we have to use legacy method called elements() method
+
+
+
+creation of Enumeration:
+Enumeration it=c.elements();
+
+methods:
+1.boolean hasNext()
+2.Object next();
+
+
+set:
+HashSet
+hashset is the implementation class of set interface which is used to store group of indvidual objects but duplicate values are not used
+
+HashSet allows null values
+its not insertion order
+it not allows duplicate values
+
+Linked HashSet
+hashset is the implementation class of set interface which is used to store group of indvidual objects but duplicate values are not used
+
+Linked Hash Set allows null values
+its  insertion order
+it not allows duplicate values
+
+
+TreeSet
+not allows null values
+its  sorted order
+it not allows duplicate values
+
+comparable interface
+present in java.lang package and contains only one method compareTo() method
+
+public int compareTo(Object obj)
+
+Example:ob1.compareTo(Obj2)
+
+It returns -ve if obj1 comes before Obj2
+It returns +ve if obj2 comes before obj1
+It returns 0 if ob1 and obj2 are equal
+
+
+comparator interface
+present in java.lang package and contains only Two method 
+1)compare() method
+2)equals()
+
+
+
+
+
